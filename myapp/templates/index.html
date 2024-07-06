@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <title>About Our website</title>
+  <body>
+    <div class="container" style="text-align: center">
+      {% include 'navbar.html' %}
+      <h1>Welcome to our website</h1>
+
+      <form action="/index/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="check" />
+        <button type="submit" style="background: cyan">Submit</button>
+      </form>
+
+      <p>
+        ➡️React JS with Project : • 🔥 🔥 Complete React Js with Project tu...
+        ➡️Learn JDBC in one video: • JDBC Crash Course in 1 hour | HINDI ➡️Learn
+        Python in One Video: • Learn Python in One Video | HINDI | ➡️Learn HTML
+        in one video: • Jquery in one video in hindi ➡️Learn HTML form in one
+        video: • Jquery in one video in hindi ➡️Learn JavaScript in one videos:
+        • Learn JavaScript in One Video | Hindi ➡️Learn Form Validation using
+        javascript and jquery: • Form Validation using JQuery | JavaSc...
+        ➡️Learn CSS in one video: • Jquery in one video in hindi ➡️Jquery in one
+        video: • Jquery in one video in hindi Kotlin is one video: • Kotlin |
+        Learn Kotlin in one video hindi ➡️Complete Python Project - Youtube
+        downloader in one video: • Jquery in one video in hindi
+      </p>
+
+      <hr />
+      <h2>Dynamic Name is :HI {{d_name}}</h2>
+      <h2>Name is :{{name}}</h2>
+      <h3>Job Profile: {{details.job}}</h3>
+      <h3>Age : {{details.age}}</h3>
+      <h2>List of Companies</h2>
+      {% for p in loc %}
+      <h3>{{p}}</h3>
+      {% endfor %}
+    </div>
+  </body>
+</html>
